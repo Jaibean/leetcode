@@ -7,24 +7,25 @@ If the input or the result is an empty string it must return false.
 Example
 hashtag('Hello world') ==> #HelloWorld
 hashtag('This is a roundtable coding challenge') ==> #ThisIsARoundTableCodingChallenge
-hashtag(' ') ==> false 
+hashtag(' ') ==> false """
 
-Challenge 2
+
+# input string
+# make first level of each word upper case use title()
+# remove white space use replace(" ", "")
+string = "this is a test"
+hashTagString = "#" + string.title().replace(" ", "")
+print(hashTagString)
+
+""" Challenge 2
 Given a string of words, you need to find the highest scoring word.
 Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
 You need to return the highest scoring word as a string.
 If two words score the same, return the word that appears earliest in the original string.
 All letters will be lowercase and all inputs will be valid. """
 
-# input string
 
-
-string = "this is a test"
-hashTagString = "#" + string.title().replace(" ", "")
-
-print(hashTagString)
-
-    
-        
-# make first level of each word upper case use title()
-# remove white space use replace(" ", "")
+# create dictionary of key value pairs to assin score to letters
+# or create a function where you iterate characters to incriment value
+# turn each string into an array of numbers 
+# math.max to get largest number
