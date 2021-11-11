@@ -19,7 +19,7 @@ const compress = (s) => {
       if (num === 1) {
         result.push(s[i]);
       } else {
-        result.push(String((num), s[i]));
+        result.push(String(num), s[i]);
       }
       i = j;
     }
