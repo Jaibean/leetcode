@@ -3,22 +3,48 @@
 // If there are ties, return the character that appears earlier in the string.
 // You can assume that the input string is non-empty.
 
-const mostFrequentChar = (s) => {
-  const count = {};
 
-  for (let char of s) {
-    if (!(char in count)) {
-      count[char] = 0;
+
+const mostFrequentChar = s => {
+    obj = {};
+    for (let char of s){
+        if (!(char in obj)){
+            obj[char] = 0;
+        }
+        obj[char] += 1;
     }
-    count[char] += 1;
-  }
-  let best = null;
-  for (let char of s) {
-    if (best === null || count[char] > count[best]) {
-      best = char;
+    let best = null;
+    for (let char of s) {
+        if ( best === null || obj[char] > obj[best]){
+            best = char;
+        }
     }
-  }
-  return best;
+    return best;
 };
 
+
 console.log(mostFrequentChar("ksdfhaa"));
+
+
+
+
+
+// const mostFrequentChar = (s) => {
+//   const count = {};
+
+//   for (let char of s) {
+//     if (!(char in count)) {
+//       count[char] = 0;
+//     }
+//     count[char] += 1;
+//   }
+//   let best = null;
+//   for (let char of s) {
+//     if (best === null || count[char] > count[best]) {
+//       best = char;
+//     }
+//   }
+//   return best;
+// };
+
+// console.log(mostFrequentChar("ksdfhaa"));
