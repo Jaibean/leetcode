@@ -12,11 +12,9 @@ const pairProduct = (numbers, targetProduct) => {
   for (let i = 0; i < numbers.length; i++){
     const num = numbers[i];
     const comp = targetProduct / num;
-
     if (comp in set) return [set[comp], i];
     set[num] = i;
   }
-
 };
 
 console.log(pairProduct([3, 2, 5, 4, 1], 8));
