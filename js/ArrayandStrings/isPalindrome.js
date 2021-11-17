@@ -4,11 +4,12 @@
 const isPalindrom = str => {
     let reg = /[\W_]/g;
     let cleanStr = str.toLowerCase('').replace(reg, '')
-    let reverseStr = cleanStr.split('').reverse('').join('');
+    console.log(cleanStr);
+    let reverseStr = cleanStr.split('').reverse().join('');
+    console.log(reverseStr);
     return str === reverseStr;
 
-}
-
+};
 
 
 // const isPalindrom = str => {
