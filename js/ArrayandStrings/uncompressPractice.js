@@ -17,7 +17,6 @@ const uncompress = (s) => {
          j++;
          i = j;
      }
-
  }
  return result.join('');
 };
