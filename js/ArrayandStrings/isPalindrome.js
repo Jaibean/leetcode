@@ -8,9 +8,7 @@ const isPalindrom = str => {
     let reverseStr = cleanStr.split('').reverse().join('');
     console.log(reverseStr);
     return str === reverseStr;
-
 };
-
 
 // const isPalindrom = str => {
 //     let len = str.length;

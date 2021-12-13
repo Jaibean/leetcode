@@ -14,8 +14,7 @@ const intersection = (a, b) => {
     
   };
 
-  //brute force
-  
+//brute force
 //   const intersection = (a, b) => {
 //     const result = [];
 //     for (let item of b) {

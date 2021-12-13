@@ -2,7 +2,7 @@
 // of a directed acyclic graph and two nodes (src, dst). The function should return a boolean 
 // indicating whether or not there exists a directed path between the source and destination nodes.
 
-
+//depth recursive
 const hasPath = (graph, src, dst) => {
     if (src === dst) return true;
   
@@ -15,6 +15,7 @@ const hasPath = (graph, src, dst) => {
     return false;
   };
 
+  //breadth iterative
   const hasPath = (graph, src, dst) => {
     const queue = [src];
   

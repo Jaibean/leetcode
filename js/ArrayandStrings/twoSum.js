@@ -3,8 +3,9 @@
 // You can return the answer in any order.
 
 
-//using hashmap
 
+
+//using hashmap
 const pairSum = (numbers, targetSum) => {
     let set = {};
     for(let i = 0; i < numbers.length; i ++){
@@ -19,7 +20,7 @@ const pairSum = (numbers, targetSum) => {
   console.log(pairSum([3, 2, 5, 4, 1], 8));
 
 
-
+// brute force
 // var twoSum = function(nums, target) {
 //     result = [];
 //     for (let i = 0; i < nums.length; i ++)

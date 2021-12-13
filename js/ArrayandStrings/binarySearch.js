@@ -5,12 +5,12 @@
 // You must write an algorithm with O(log n) runtime complexity.
 
 var search = function(nums, target) {
-    // pointer at begining
-       let l = 0
+    // pointer at beggining
+       let l = 0;
        //pointer at end
-       let h = nums.length - 1
+       let h = nums.length - 1;
        
-       while ( l <= h){
+       while (l <= h){
           let mid = Math.floor((l + h) / 2);
            if (nums[mid] === target){
                return mid;
