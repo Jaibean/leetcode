@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .ad {
+        padding: 20px;
+        background: #cccccc;
+        width: 300px;
+        height: 250px;
+      }
+      .swiper-content {
+        display: flex;
+      }
+    </style>
+    <div class="swiper-content">
+      <div class="ad">Container 1</div>
+      <div class="ad">Container 2</div>
+      <div class="ad">Container 3</div>
+    </div>
+
+    <button onClick="swapDiv2();">swap divs</button>
+    <script>
+      function swapDiv2() {
+        // let div_array = document.querySelectorAll(".ad");
+        let d1 = document.querySelectorAll('.ad')[1].innerText;
+        document.querySelectorAll('.ad')[1].innerText = document.querySelectorAll('.ad')[2].innerText;
+        document.querySelectorAll('.ad')[2].innerText = d1;
+      
+
+        // console.log(div_array);
+        // console.log(div_array[1]);
+      console.log(d1);
+        };
+    </script>
+  </body>
+</html>
