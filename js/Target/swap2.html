@@ -28,15 +28,20 @@
     <script>
       function swapDiv2() {
         // let div_array = document.querySelectorAll(".ad");
-        let d1 = document.querySelectorAll('.ad')[1].innerText;
-        document.querySelectorAll('.ad')[1].innerText = document.querySelectorAll('.ad')[2].innerText;
-        document.querySelectorAll('.ad')[2].innerText = d1;
-      
+        let d1 = document.querySelectorAll(".ad")[1].innerText;
+        document.querySelectorAll(".ad")[1].innerText =
+          document.querySelectorAll(".ad")[2].innerText;
+        document.querySelectorAll(".ad")[2].innerText = d1;
+      }
 
-        // console.log(div_array);
-        // console.log(div_array[1]);
-      console.log(d1);
-        };
+      function swapElements(elm1, elm2) {
+        var afterElm2 = elm2.nextElementSibling;
+        var parent = elm2.parentNode;
+        elm1.replaceWith(elm2);
+        parent.insertBefore(elm1, afterElm2);
+      }
+
+      //swapElements(xxx,xxx)
     </script>
   </body>
 </html>
