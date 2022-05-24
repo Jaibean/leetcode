@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .ad {
+        padding: 20px;
+        background: #cccccc;
+        width: 300px;
+        height: 250px;
+      }
+      #banner1 {
+        display: flex;
+      }
+      #banner2 {
+        display: flex;
+      }
+    </style>
+    <div id="banner1">
+      <div class="ad">Container 1</div>
+      <div class="ad">Container 2</div>
+      <div class="ad">Container 3</div>
+    </div>
+    &nbsp;
+    <div id="banner2">
+      <div class="ad">Container 4</div>
+      <div class="ad">Container 5</div>
+      <div class="ad">Container 6</div>
+    </div>
+    <script>
+    //   function insertAfter(newNode, existingNode) {
+    //     existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
+    //   }
+    //   insertAfter('banner2', 'banner1');
+
+
+    let el1 = document.getElementById('banner1');
+    let el2 = document.getElementById('banner2');
+        
+
+        // insert a new node before the first list item
+        el1.insertBefore(el2, el1.firstElementChild);
+    </script>
+  </body>
+</html>

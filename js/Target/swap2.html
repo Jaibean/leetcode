@@ -26,22 +26,62 @@
 
     <button onClick="swapDiv2();">swap divs</button>
     <script>
-      function swapDiv2() {
-        // let div_array = document.querySelectorAll(".ad");
-        let d1 = document.querySelectorAll(".ad")[1].innerText;
-        document.querySelectorAll(".ad")[1].innerText =
-          document.querySelectorAll(".ad")[2].innerText;
-        document.querySelectorAll(".ad")[2].innerText = d1;
-      }
+      // function swapDiv2() {
+      //   // let div_array = document.querySelectorAll(".ad");
+      //   let d1 = document.querySelectorAll(".ad")[1].innerText;
+      //   document.querySelectorAll(".ad")[1].innerText =
+      //     document.querySelectorAll(".ad")[2].innerText;
+      //   document.querySelectorAll(".ad")[2].innerText = d1;
+      // }
+      // // swapDiv2();
 
-      function swapElements(elm1, elm2) {
-        var afterElm2 = elm2.nextElementSibling;
-        var parent = elm2.parentNode;
-        elm1.replaceWith(elm2);
-        parent.insertBefore(elm1, afterElm2);
-      }
+      // function swapElements(elm1, elm2) {
+      //   var afterElm2 = elm2.nextElementSibling;
+      //   var parent = elm2.parentNode;
+      //   elm1.replaceWith(elm2);
+      //   parent.insertBefore(elm1, afterElm2);
+      // }
 
-      //swapElements(xxx,xxx)
+      // swapElements("ad[1]", "ad[2]");
+
+      // function swapDiv() {
+      //   let d1 = document.querySelectorAll(".swiper-slide")[1].innerHTML;
+      //   document.querySelectorAll(".swiper-slide")[1].innerHTML =
+      //     document.querySelectorAll(".swiper-slide")[2].innerHTML;
+      //   document.querySelectorAll(".swiper-slide")[2].innerHTML = d1;
+      // }
+      // // swapDiv();
+
+      // function insertAfter(newNode, referenceNode) {
+      //   referenceNode.parentNode.insertBefore(
+      //     newNode,
+      //     referenceNode.nextSibling
+      //   );
+      // }
+      // insertAfter("Homepage_EBB_banner", "compare-plans");
+
+      // element.parentNode.insertBefore(
+      //   Homepage_EBB_banner,
+      //   element.homepage_top - banner.nextSibling
+      // );
+
+      // function insert(el1, el2) {
+      //   el1.parentNode.insertBefore(el1, el2.nextSibling);
+      // }
+      // insert("Homepage_EBB_banner", "compare-plans");
+
+      // function insertEl(elm1, elm2) {
+      //   var afterElm2 = elm2.nextElementSibling;
+      //   var parent = elm2.parentNode;
+      //   parent.insertBefore(elm1, afterElm2);
+      // }
+
+      // insertEl("Homepage_EBB_banner", "homepage_fiber2");
+
+      function insertAfter(newNode, existingNode) {
+        existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
+      }
+      insertAfter(ad,ad);
     </script>
   </body>
 </html>
