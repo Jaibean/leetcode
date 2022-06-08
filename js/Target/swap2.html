@@ -26,62 +26,75 @@
 
     <button onClick="swapDiv2();">swap divs</button>
     <script>
-      // function swapDiv2() {
-      //   // let div_array = document.querySelectorAll(".ad");
-      //   let d1 = document.querySelectorAll(".ad")[1].innerText;
-      //   document.querySelectorAll(".ad")[1].innerText =
-      //     document.querySelectorAll(".ad")[2].innerText;
-      //   document.querySelectorAll(".ad")[2].innerText = d1;
-      // }
-      // // swapDiv2();
+      function swapDiv2() {
+        // let div_array = document.querySelectorAll(".ad");
+        let d1 = document.querySelectorAll(".ad")[1].innerText;
+        document.querySelectorAll(".ad")[1].innerText =
+          document.querySelectorAll(".ad")[2].innerText;
+        document.querySelectorAll(".ad")[2].innerText = d1;
+      }
+      // swapDiv2();
 
-      // function swapElements(elm1, elm2) {
-      //   var afterElm2 = elm2.nextElementSibling;
-      //   var parent = elm2.parentNode;
-      //   elm1.replaceWith(elm2);
-      //   parent.insertBefore(elm1, afterElm2);
-      // }
+      function swapElements(elm1, elm2) {
+        var afterElm2 = elm2.nextElementSibling;
+        var parent = elm2.parentNode;
+        elm1.replaceWith(elm2);
+        parent.insertBefore(elm1, afterElm2);
+      }
 
-      // swapElements("ad[1]", "ad[2]");
+      swapElements("Homepage_EBB_banner", "homepage_fiber2");
 
-      // function swapDiv() {
-      //   let d1 = document.querySelectorAll(".swiper-slide")[1].innerHTML;
-      //   document.querySelectorAll(".swiper-slide")[1].innerHTML =
-      //     document.querySelectorAll(".swiper-slide")[2].innerHTML;
-      //   document.querySelectorAll(".swiper-slide")[2].innerHTML = d1;
-      // }
-      // // swapDiv();
+      function swapDiv() {
+        let d1 = document.querySelectorAll(".swiper-slide")[1].innerHTML;
+        document.querySelectorAll(".swiper-slide")[1].innerHTML =
+          document.querySelectorAll(".swiper-slide")[2].innerHTML;
+        document.querySelectorAll(".swiper-slide")[2].innerHTML = d1;
+      }
+      // swapDiv();
 
-      // function insertAfter(newNode, referenceNode) {
-      //   referenceNode.parentNode.insertBefore(
-      //     newNode,
-      //     referenceNode.nextSibling
-      //   );
-      // }
-      // insertAfter("Homepage_EBB_banner", "compare-plans");
+      function insertAfter(newNode, referenceNode) {
+        referenceNode.parentNode.insertBefore(
+          newNode,
+          referenceNode.nextSibling
+        );
+      }
+      insertAfter("Homepage_EBB_banner", "compare-plans");
 
-      // element.parentNode.insertBefore(
-      //   Homepage_EBB_banner,
-      //   element.homepage_top - banner.nextSibling
-      // );
+      element.parentNode.insertBefore(
+        Homepage_EBB_banner,
+        element.homepage_top - banner.nextSibling
+      );
 
-      // function insert(el1, el2) {
-      //   el1.parentNode.insertBefore(el1, el2.nextSibling);
-      // }
-      // insert("Homepage_EBB_banner", "compare-plans");
+      function insert(el1, el2) {
+        el1.parentNode.insertBefore(el1, el2.nextSibling);
+      }
+      insert("Homepage_EBB_banner", "compare-plans");
 
-      // function insertEl(elm1, elm2) {
-      //   var afterElm2 = elm2.nextElementSibling;
-      //   var parent = elm2.parentNode;
-      //   parent.insertBefore(elm1, afterElm2);
-      // }
+      function insertEl(elm1, elm2) {
+        var afterElm2 = elm2.nextElementSibling;
+        var parent = elm2.parentNode;
+        parent.insertBefore(elm1, afterElm2);
+      }
 
-      // insertEl("Homepage_EBB_banner", "homepage_fiber2");
+      insertEl("Homepage_EBB_banner", "homepage_fiber2");
 
       function insertAfter(newNode, existingNode) {
         existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
       }
-      insertAfter(ad,ad);
+      insertAfter(homepage_fiber2, Homepage_EBB_banner);
+
+      var block = document
+        .querySelectorAll(".container.info-blocks")[0]
+        .querySelector(".info-blocks-list");
+      var divOne = block.querySelectorAll(".info-block")[0];
+      var divTwo = block.querySelectorAll(".info-block")[1];
+      function swap(node1, node2) {
+        const afterNode2 = node2.nextElementSibling;
+        const parent = node2.parentNode;
+        node1.replaceWith(node2);
+        parent.insertBefore(node1, afterNode2);
+      }
+      swap(divOne, divTwo);
     </script>
   </body>
 </html>
