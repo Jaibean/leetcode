@@ -33,22 +33,23 @@
       <div class="ad">Container 6</div>
     </div>
     <script>
-    //   function insertAfter(newNode, existingNode) {
-    //     existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
-    //   }
-    //   insertAfter('banner2', 'banner1');
+      //   function insertAfter(newNode, existingNode) {
+      //     existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
+      //   }
+      //   insertAfter('banner2', 'banner1');
 
+      // let el1 = document.getElementById('homepage_reconnect');
+      // let el2 = document.getElementById('Homepage_EBB_banner');
 
-    // let el1 = document.getElementById('homepage_reconnect');
-    // let el2 = document.getElementById('Homepage_EBB_banner');
-        
-    //     el1.insertBefore(el2, el1.firstElementChild);
+      //     el1.insertBefore(el2, el1.firstElementChild);
 
-        function hide() {
-        el2 = document.querySelector('.banner2')
-        el2.style.display = 'none';  
-      };
-      hide();
+      function hide(x) {
+        let el = document.getElementsByClassName(x);
+        for (const element of el) {
+          element.style.display = "none";
+        }
+      }
+      hide("field__item field__item-container");
     </script>
   </body>
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function vidSwap(elId) {
+        let currentID = document.getElementsByClassName(elId);
+            if (currentID.hasAttribute("data-jw-id")){
+                currentID.setAttribute("data-jw-id", "0dkrbxk3");
+            }
+        };
+        vidSwap("tv-block-video");
+
+        let videoDiv = document.querySelectorAll("tv-block-video");
+        videoDiv.setAttribute("data-jw-id", "0dkrbxk3")
+    </script>
+</body>
+</html>

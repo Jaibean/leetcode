@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero-section-text">
+        You may be eligible to get FREE Internet with the new Affordable
+        Connectivity Program
+      </div>
+    </div>
+    <script>
+        function switchTxt(el1, el2){
+        document.querySelector(el1).innerHTML = '<h2>Fiber Hero Details</h2>';
+        document.querySelector(el2).innerHTML = "I changed the hero details popup!";
+        }
+        switchTxt('.popup-head', '.popup-body');
+
+        function swapElements(elm1, elm2) {
+        var afterElm2 = elm2.nextElementSibling;
+        var parent = elm2.parentNode;
+        elm1.replaceWith(elm2);
+        parent.insertBefore(elm2, afterElm2);
+      }
+
+      swapElements(".info-block", ".info-blocks-list");
+
+      function hide(el1) {
+        el2 = document.querySelector(el1)
+        el2.style.display = 'none';
+      };
+      hide('.field__item field__item-container');
+
+
+      function swapDiv2() {
+        let d1 = document.querySelectorAll(".info-block").innerHTML;
+        document.querySelectorAll(".info-block").innerHTML =
+          document.querySelectorAll(".info-blocks-list").innerHTML;
+        document.querySelectorAll(".info-blocks-list").innerHTML = d1;
+      };
+      swapDiv2();
+    </script>
+  </body>
+</html>
