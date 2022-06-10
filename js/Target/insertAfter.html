@@ -20,6 +20,15 @@
       #banner2 {
         display: flex;
       }
+
+      #banner3 {
+        display: flex;
+      }
+      @media (max-width: 600px) {
+        #internet_top-banner {
+          margin-bottom: 0px;
+        }
+      }
     </style>
     <div id="banner1">
       <div class="ad">Container 1</div>
@@ -32,24 +41,43 @@
       <div class="ad">Container 5</div>
       <div class="ad">Container 6</div>
     </div>
+    &nbsp;
+    <div id="banner3">
+      <div class="ad">Container 7</div>
+      <div class="ad">Container 8</div>
+      <div class="ad">Container 9</div>
+    </div>
     <script>
-      //   function insertAfter(newNode, existingNode) {
-      //     existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
-      //   }
-      //   insertAfter('banner2', 'banner1');
-
-      // let el1 = document.getElementById('homepage_reconnect');
-      // let el2 = document.getElementById('Homepage_EBB_banner');
-
-      //     el1.insertBefore(el2, el1.firstElementChild);
-
-      function hide(x) {
-        let el = document.getElementsByClassName(x);
-        for (const element of el) {
-          element.style.display = "none";
-        }
+      function insertAfter(newNode, existingNode) {
+        existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
       }
-      hide("field__item field__item-container");
+      insertAfter("banner3", "banner1");
+
+      function sertAfter(el1, el2) {
+        el1.appendAfter(document.getElementById(el2));
+      }
+
+      sertAfter("banner3", "banner1");
+
+      let el1 = document.getElementById("banner2");
+      let el2 = document.getElementById("banner3");
+      el1.insertBefore(el2, el1.firstElementChild);
+
+      // el1.appendAfter(document.getElementById(el2));
+
+      el1.insertBefore(el2, el1.firstElementChild);
+
+      // function hide(x) {
+      //   let el = document.getElementsByClassName(x);
+      //   for (const element of el) {
+      //     element.style.display = "none";
+      //   }
+      // }
+      // hide("field__item field__item-container");
+
+      // let el1 = document.getElementById("internet_top-banner");
+      // let el2 = document.getElementById("internet_bottom-banner");
+      // el1.insertBefore(el2, el1.firstElementChild);
     </script>
   </body>
 </html>

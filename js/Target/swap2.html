@@ -95,6 +95,19 @@
         parent.insertBefore(node1, afterNode2);
       }
       swap(divOne, divTwo);
+
+      function insertAfter(newNode, referenceNode) {
+        referenceNode.parentNode.insertBefore(
+          newNode,
+          referenceNode.nextSibling
+        );
+      }
+      insertAfter("internet_bottom-banner", "internet_top-banner");
+
+      var block = document.getElementById("internet_bottom-banner");
+      document
+        .getElementById("internet_top-banner")
+        .insertAdjacentElement("afterend", block);
     </script>
   </body>
 </html>

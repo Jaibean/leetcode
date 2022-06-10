@@ -20,6 +20,12 @@
         }
         switchTxt('.popup-head', '.popup-body');
 
+        function switchTxt(el1){
+        document.querySelector(el1)[6].innerHTML = 'Check availability';
+        
+        }
+        switchTxt('.popup-head[6]');
+
         function swapElements(elm1, elm2) {
         var afterElm2 = elm2.nextElementSibling;
         var parent = elm2.parentNode;
