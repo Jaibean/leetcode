@@ -14,85 +14,134 @@
       </div>
     </div>
     <script>
-      function switchTxt(el1, el2) {
-        document.querySelector(el1).innerHTML = "<h2>Fiber Hero Details</h2>";
-        document.querySelector(el2).innerHTML =
-          "I changed the hero details popup!";
-      }
-      switchTxt(".popup-head", ".popup-body");
+                  function switchTxt(el1, el2) {
+                    document.querySelector(el1).innerHTML = "<h2>Fiber Hero Details</h2>";
+                    document.querySelector(el2).innerHTML =
+                      "I changed the hero details popup!";
+                  }
+                  switchTxt(".popup-head", ".popup-body");
 
-      function switchTxt(el1) {
-        document.querySelector(el1)[6].innerHTML = "Check availability";
-      }
-      switchTxt(".popup-head[6]");
+                  function switchTxt(el1) {
+                    document.querySelector(el1)[6].innerHTML = "Check availability";
+                  }
+                  switchTxt(".popup-head[6]");
 
-      function swapElements(elm1, elm2) {
-        var afterElm2 = elm2.nextElementSibling;
-        var parent = elm2.parentNode;
-        elm1.replaceWith(elm2);
-        parent.insertBefore(elm2, afterElm2);
-      }
+                  function swapElements(elm1, elm2) {
+                    var afterElm2 = elm2.nextElementSibling;
+                    var parent = elm2.parentNode;
+                    elm1.replaceWith(elm2);
+                    parent.insertBefore(elm2, afterElm2);
+                  }
 
-      swapElements(".info-block", ".info-blocks-list");
+                  swapElements(".info-block", ".info-blocks-list");
 
-      function hide(el1) {
-        el2 = document.querySelectorAll(el1);
-        el2.style.display = "none";
-      }
-      hide(".sc-fzoyAV.sc-fzpjYC.imIJgE");
+                  function hide(el1) {
+                    el2 = document.querySelectorAll(el1);
+                    el2.style.display = "none";
+                  }
+                  hide(".sc-fzoyAV.sc-fzpjYC.imIJgE");
 
-      var z = document.querySelectorAll(".sc-fzoyAV.sc-fzpjYC.imIJgE");
-      let parentDiv = z.parentNode;
-      console.log(z);
-      console.log(parentDiv);
+                  var z = document.querySelectorAll(".sc-fzoyAV.sc-fzpjYC.imIJgE");
+                  let parentDiv = z.parentNode;
+                  console.log(z);
+                  console.log(parentDiv);
 
-      var z = document.querySelectorAll(".sc-fzoyAV.sc-fzpjYC.imIJgE");
-      Array.prototype.forEach.call(z, function (node) {
-        node.parentNode.removeChild(node);
-      });
+                  var z = document.querySelectorAll(".sc-fzoyAV.sc-fzpjYC.imIJgE");
+                  Array.prototype.forEach.call(z, function (node) {
+                    node.parentNode.removeChild(node);
+                  });
 
-      var x = document.querySelectorAll(".sc-fzoyAV.sc-fzpjYC.imIJgE");
-      console.log(x);
+                  var x = document.querySelectorAll(".sc-fzoyAV.sc-fzpjYC.imIJgE");
+                  console.log(x);
 
-      var vidEl = document.getElementsByClassName("sc-fzoyAV");
-      console.log(vidEl);
+                  var vidEl = document.getElementsByClassName("sc-fzoyAV");
+                  console.log(vidEl);
 
-      document.querySelectorAll(".sc-fznyAO.CWQMf").forEach((e) => e.remove());
+                  document.querySelectorAll(".sc-fznyAO.CWQMf").forEach((e) => e.remove());
 
-      var videoExists = setInterval(function () {
-        if (document.querySelector("video")) {
-          if (document.querySelector("video")) {
-            document
-              .querySelector("video")
-              .closest(".sc-fznyAO").style.display = "none";
-          }
-          clearInterval(videoExists);
-        }
+                  var videoExists = setInterval(function () {
+                    if (document.querySelector("video")) {
+                      if (document.querySelector("video")) {
+                        document
+                          .querySelector("video")
+                          .closest(".sc-fznyAO").style.display = "none";
+                      }
+                      clearInterval(videoExists);
+                    }
+                  }, 100);
+
+                 var test1 = document.querySelector("video").closest(".sc-fznyAO");
+                 test1.style.display = "none";
+                 console.log(test1);
+
+                  let vidReady = setInterval(() => {
+                    if (
+                      document
+                        .querySelectorAll(".swiper-slide")[1]
+                        .querySelector(".internet-scale .lazy-bg")
+                        .classList.contains("lazy-loaded")
+                    ) {
+                      clearInterval(vidReady);
+                      hide();
+                    }
+                  }, 100);
+
+                  function swapDiv2() {
+                    let d1 = document.querySelectorAll(".info-block").innerHTML;
+                    document.querySelectorAll(".info-block").innerHTML =
+                      document.querySelectorAll(".info-blocks-list").innerHTML;
+                    document.querySelectorAll(".info-blocks-list").innerHTML = d1;
+                  }
+                  swapDiv2();
+
+                  var videoExists = setInterval(function() {
+                    if (document.querySelectorAll('.sc-fznyAO.CWQMf')[8] && document.querySelectorAll('.sc-fznyAO.CWQMf')[9])  {
+                    document.querySelectorAll('.sc-fznyAO.CWQMf')[8].style.display = "none" && document.querySelectorAll('.sc-fznyAO.CWQMf')[8].style.display = "none";
+                    clearInterval(videoExists);
+               }
+            }, 100);
+
+            var videoExists = setInterval(function() {
+         if (document.querySelectorAll('.slick-initialized')[1]) {
+           document.querySelectorAll(".slick-slider.visualSectionSlider.slick-initialized")[1].style.display = "none";
+            clearInterval(videoExists);
+         }
       }, 100);
 
-     var test1 = document.querySelector("video").closest(".sc-fznyAO");
-     test1.style.display = "none";
-     console.log(test1);
 
-      let vidReady = setInterval(() => {
-        if (
-          document
-            .querySelectorAll(".swiper-slide")[1]
-            .querySelector(".internet-scale .lazy-bg")
-            .classList.contains("lazy-loaded")
-        ) {
-          clearInterval(vidReady);
-          hide();
-        }
+   var videoExists = setInterval(function() {
+     if (document.querySelectorAll('.sc-fznyAO.CWQMf')) {
+       document.querySelectorAll('.sc-fznyAO.CWQMf')[8].style.display = "none"
+              clearInterval(videoExists);
+         }
       }, 100);
 
-      function swapDiv2() {
-        let d1 = document.querySelectorAll(".info-block").innerHTML;
-        document.querySelectorAll(".info-block").innerHTML =
-          document.querySelectorAll(".info-blocks-list").innerHTML;
-        document.querySelectorAll(".info-blocks-list").innerHTML = d1;
-      }
-      swapDiv2();
+var videoExists2 = setInterval(function() {
+     if (document.querySelectorAll('.sc-fznyAO.CWQMf')) {
+       document.querySelectorAll('.sc-fznyAO.CWQMf')[9].style.display = "none"
+              clearInterval(videoExists2);
+         }
+      }, 100);
+
+      var videoExists = setInterval(function() {
+     if (document.querySelectorAll('.sc-fznyAO')[8]) {
+       document.querySelectorAll('.sc-fznyAO.CWQMf')[8].style.display = "none"
+              clearInterval(videoExists);
+         }
+      }, 100);
+
+var videoExists2 = setInterval(function() {
+     if (document.querySelectorAll('.sc-fznyAO')[9]) {
+       document.querySelectorAll('.sc-fznyAO.CWQMf')[9].style.display = "none"
+              clearInterval(videoExists2);
+         }
+      }, 100);
+
+            var el1 = document.querySelectorAll(".sc-fznyAO.CWQMf")[8];
+      var el2 = document.querySelectorAll(".sc-fznyAO.CWQMf")[9];
+
+      el1.style.display = "none";
+      el2.style.display = "none";
     </script>
   </body>
 </html>
